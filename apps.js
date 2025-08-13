@@ -1,2 +1,2 @@
-console.dir(document.querySelector("div a"));
+console.dir(document.querySelectorAll("div a"));
 
