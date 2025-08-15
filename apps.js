@@ -1,4 +1,5 @@
-console.dir(document.querySelector("img"));
+let links = document.querySelectorAll(".box a");
 
-console.dir(img.getAttribute('id'));
-console.dir(img.setAttribute('id', 'spidermanImg'));
+for(let i = 0; i<links.length; i++) {
+    links[i].style.color = "yellow";
+}
