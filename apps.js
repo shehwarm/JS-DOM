@@ -1,16 +1,24 @@
 let btns = document.querySelectorAll("button");
 
 for(btn of btns) {
-    
-     btn.onclick = sayHello;
-     btn.onclick = sayName;
 
+    btn.addEventListener("click", sayHello);
+    btn.addEventListener("click", sayGoodbye);
 
     function sayHello() {
-        console.log("Hello, World!");
+        console.log("Hello");
     }
-     function sayName() {
-        console.log("John Doe");
+    function sayGoodbye() {
+        console.log("Goodbye");
     }
+}
 
-};
+
+
+
+
+
+
+
+
+
