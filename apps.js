@@ -7,8 +7,4 @@ for(btn of btns) {
         console.log("Hello, World!");
     }
 
-    btn.onmouseover = function() {
-        console.log("Mouse over button");
-    };
-
 }
