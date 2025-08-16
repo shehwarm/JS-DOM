@@ -8,5 +8,8 @@ for(btn of btns) {
       function hello() {
         console.log("Hello, World!");
     }
+    btn.onmouseover = function() {
+        console.log("Mouse over button");
+    }
 
 }
