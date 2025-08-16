@@ -1,5 +1,9 @@
-body {
+/*body {
   font-family: Arial;
+}
+
+.green {
+  color: green;
 }
 
 #mainImg {
@@ -25,4 +29,8 @@ body {
 
 #description {
   background-color: antiquewhite;
+}*/
+
+.red {
+  color: red;
 }

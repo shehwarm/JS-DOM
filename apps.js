@@ -1,5 +1,5 @@
-let links = document.querySelectorAll(".box a");
+let para1 = document.createElement('p');
+para1.textContent = 'hey Im red';
+document.querySelector('body').appendChild(para1);
 
-for(let i = 0; i<links.length; i++) {
-    links[i].style.color = "yellow";
-}
+para1.classList.add('red');
