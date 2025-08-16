@@ -1,8 +1,12 @@
-let btn = document.querySelector("button");
-console.dir(btn);
+let btns = document.querySelectorAll("button");
 
-function hello() {
-    console.log("Hello, World!");
+for(btn of btns) {
+    
+
+     btn.onclick = hello;
+
+      function hello() {
+        console.log("Hello, World!");
+    }
+
 }
-
-btn.onclick = hello;
