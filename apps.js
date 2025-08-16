@@ -1,5 +1,5 @@
-let para1 = document.createElement('p');
-para1.textContent = 'hey Im red';
-document.querySelector('body').appendChild(para1);
-
-para1.classList.add('red');
+let head1 = document.createElement("h1");
+head1.textContent = "Im a blue heading";
+let body = document.querySelector("body");
+body.appendChild(head1);
+head1.classList.add("blue");
