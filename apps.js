@@ -10,3 +10,6 @@ box.appendChild(head1);
 let para1 = document.createElement("p");
 para1.textContent = "hey Im a paragraph inside a div";
 box.appendChild(para1);
+let para2 = document.createElement("p");
+para12.textContent = "hey Im another paragraph inside a div";
+box.appendChild(para2);
