@@ -1,14 +1,17 @@
-let btn = document.querySelector('button');
-let p = document.querySelector('p');
-let h1 = document.querySelector('h1');
-let h3 = document.querySelector('h3');
+let inp = document.querySelector('input');
 
-function changeColor(){
-    console.dir(this.innerText);
-    this.style.backgroundColor = 'red';
-}
 
-btn.addEventListener('click', changeColor);
-h1.addEventListener('click', changeColor);
-h3.addEventListener('click', changeColor);
-p.addEventListener('click', changeColor);
+inp.addEventListener("keydown", function(event) {
+    console.log(event.code);
+    if (event.code === "ArrowUp") {
+        console.log("You pressed the up arrow key");
+    } else if (event.code === "ArrowDown") {
+        console.log("You pressed the down arrow key");
+    } else if (event.code === "ArrowLeft") {    
+        console.log("You pressed the left arrow key");
+    } else if (event.code === "ArrowRight") {
+        console.log("You pressed the right arrow key");
+    }
+});
+
+ 
