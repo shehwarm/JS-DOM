@@ -1,8 +1,28 @@
+let btn = document.querySelector("button");
 let inp = document.querySelector("input");
-let p = document.querySelector("p");
+let ul = document.querySelector("ul");
 
+btn.addEventListener("click", function(){
+    let item = document.createElement('li');
+    item.innerText = inp.value;
 
-inp.addEventListener("change", function(){
+    let delbtn = document.createElement("button");
+    delbtn.innerText = "delete";
+    delbtn.classList.add("delete");
+
+    item.appendChild(delbtn);
+    ul.appendChild(item);
     console.log(inp.value);
-    p.innerText = inp.value;
+    inp.value = "";
 });
+
+
+ul.addEventListener("click", function(event){
+    if(event.target.nodeName == "BUTTON"){
+     let listItem = event.target.parentElement;
+     listItem.remove();
+     console.log("deleted");
+  
+    }
+    });
+
