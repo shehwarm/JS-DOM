@@ -1,9 +1,12 @@
-function hello() {
-    console.log("hello");
+function one(){
+    return 1;
 }
 
-function demo(){
-    hello();
+function two(){
+    return one() + one();
 }
 
-demo(); 
+function three(){
+    let ans = two()+ one();
+    console.log(ans);
+}
