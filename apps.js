@@ -1,14 +1,7 @@
-function one(){
-    return 1;
-}
 
-function two(){
-    return one() + one();
-}
 
-function three(){
-    let ans = two()+ one();
-    console.log(ans);
-}
+setTimeout(() => {
+    console.log("apna college")
+}, 2000);
 
-three();
+console.log("hello...");
