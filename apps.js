@@ -18,12 +18,9 @@ savetoDb("apna college")
      .then(() =>{
         console.log("data 1.promise resolved");
         savetoDb("hello world")
-        .then(()=>{
+     .then(()=>{
            console.log("data 2.promise resolved");
         })
-        .catch(()=>{
-        console.log("promise rejected");
-     });
      })
      .catch(()=>{
         console.log("promise rejected");
