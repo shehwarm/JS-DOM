@@ -1,15 +1,33 @@
-h1 = document.querySelector("h1");
-
-function changeColor(color, delay, nextColorChange){
-
-    setTimeout(()=> {
-        h1.style.color = color;
-        nextColorChange();
-    },delay);
+function savetoDb(data, success, failure)
+{
+    let internetSpeed = Math.floor(Math.random()*10)+1;
+    console.log(internetSpeed);
+    if(internetSpeed > 4){
+      success();
+    } else{
+      failure();
+    }
+    
 }
 
-changeColor("red",1000, () => {
-    changeColor("orange",1000,() => {
-        changeColor("blue",1000);
-    })
-});
+savetoDb(
+    "apna college",
+     ()=>{
+    console.log("your data was saved");
+    savetoDb(
+        "hello world",
+         ()=>{
+         console.log("your data 2 was saved");
+         },
+         ()=>{
+        console.log("weak connection");
+     }
+    )
+     },
+     ()=>{
+        console.log("weak connection");
+     }
+);
+
+    
+
