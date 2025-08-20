@@ -1,5 +1,6 @@
 
 
+
 function savetoDb(data){
     return new Promise((resolve, reject)=>{
     let internetSpeed = Math.floor(Math.random()*10)+1;
@@ -11,4 +12,15 @@ function savetoDb(data){
     });
 }
 
-savetoDb("apna college");
+
+
+savetoDb("apna college")
+     .then(() =>{
+        console.log("promise resolved");
+        console.log(request);
+     })
+     .catch(()=>{
+        console.log("promise rejected");
+        console.log(request);
+     });
+
