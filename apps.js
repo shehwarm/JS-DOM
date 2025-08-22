@@ -1,5 +1,7 @@
-let jsonRes =
-       {"fact":"A cat's brain is more similar to a man's brain than that of a dog.","length":66};
 
-let validRes = JSON.parse(jsonRes);
-console.log(validRes.fact);
+
+let student = {
+    name: "shehwar",
+    age:20,
+};
+
