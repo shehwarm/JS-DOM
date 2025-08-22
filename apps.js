@@ -1,12 +1,23 @@
 
-async function getPost() {
+function delayValue() {
+  return new Promise(resolve => {
+    setTimeout(() => resolve(10), 1000);
+  });
+}
+
+async function processValues() {
   try {
-    let response = await fetch("https://jsonplaceholder.typicode.com/posts/1");
-    let data = await response.json();
-    console.log("Post Title:", data.title);
+    let num = await delayValue();
+    console.log("First:", num);
+
+    num = num * 2;
+    console.log("Second:", num);
+
+    num = num * 3;
+    console.log("Third:", num);
   } catch (error) {
-    console.error("Error fetching data:", error);
+    console.error("Error:", error);
   }
 }
 
-getPost();
+processValues();
