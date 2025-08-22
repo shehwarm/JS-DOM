@@ -1,18 +1,5 @@
-h1 = document.querySelector("h1");
+let jsonRes =
+       {"fact":"A cat's brain is more similar to a man's brain than that of a dog.","length":66};
 
-function changeColor(color, delay){
-    return new Promise((resolve, reject)=>{
-        setTimeout(()=>{
-            h1.style.color = color;
-            console.log(`color chnaged to $(color)`);
-            resolve("color changed");
-        },delay);
-        });
-    }
-
-    async function demo() {
-       await changeColor("red",1000);
-       await changeColor("orange",1000);
-       await changeColor("green",1000);
-        changeColor("blue",1000);
-    }
+let validRes = JSON.parse(jsonRes);
+console.log(validRes.fact);
