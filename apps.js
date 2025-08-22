@@ -1,28 +1,18 @@
-
-
-
-function savetoDb(data){
-    return new Promise((resolve, reject)=>{
-    let internetSpeed = Math.floor(Math.random()*10)+1;
-    if(internetSpeed > 4){
-        resolve("data was saved");
-    } else{
-        reject("weak connection");
-    }
-    });
+async function greet(){
+    throw "404 not found";
+    return "hello";
 }
 
+greet()
+.then((result)=>{
+    console.log("success");
+    console.log("result was ", result);
+})
+.catch((err)=>{
+    console.log("promise rejected",err);
+});
 
+let demo = async () => {
+    return 5;
 
-savetoDb("apna college")
-     .then(() =>{
-        console.log("data 1.promise resolved");
-        savetoDb("hello world")
-     .then(()=>{
-           console.log("data 2.promise resolved");
-        })
-     })
-     .catch(()=>{
-        console.log("promise rejected");
-     });
-
+};
