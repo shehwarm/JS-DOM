@@ -1,7 +1,13 @@
 let url = "https://catfact.ninja/fact";
 
 async function getFacts(){
-    let res = await fetch(url);
-    let data = await res.json();
-    console.log(data);
+    try{
+      let res = await axios.get(url);
+      
+      console.log(res);  
+
+    } catch(e){
+        console.log("erorr--",e);
+    }
+
 }
