@@ -1,12 +1,16 @@
-let url = "https://catfact.ninja/fact";
+let url = "https://jsonplaceholder.typicode.com/posts";
 
-async function getCatFact() {
+async function createPost() {
   try {
-    let res = await axios.get(url);
-    console.log("Cat Fact:", res.data.fact);
+    let res = await axios.post(url, {
+      title: "Hello World",
+      body: "This is a test post",
+      userId: 1
+    });
+    console.log("Post Created:", res.data);
   } catch (e) {
     console.log("Error:", e);
   }
 }
 
-getCatFact();
+createPost();
